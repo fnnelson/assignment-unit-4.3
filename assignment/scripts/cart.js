@@ -23,26 +23,32 @@ console.log(basket);
 
 console.log(`Basket is now ${basket}`);
 
-// function listItems(container) {
-//     for (thing in container) {
-//         console.log(container[thing]);
-//     }
-// }
-
 function listItems(container) {
-    for (let i = 0; i < container.length; i++) {
-        console.log(container[i]);
+    for (thing in container) {
+        console.log(container[thing]);
     }
-    return container;
 }
+
+// function listItems(container) {
+//     for (let i = 0; i < container.length; i++) {
+//         console.log(container[i]);
+//     }
+//     return container;
+// }
+//I think both of these loop methods work here?
 
 listItems(basket);
 console.log(`Basket items are: ${basket}`);
 
-function empty() {
-    basket = [];
+function empty(container) {
+    while (container.length > 0) {
+        console.log('Taking out:', container.pop());
+    }
+    return "empty";
 }
 
+console.log('After removing everything... basket is:', empty(basket));
+console.log('Basket is now:', basket);
 
 
 
