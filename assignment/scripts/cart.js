@@ -14,8 +14,10 @@ function addItem(item) {
 }
 
 console.log('Adding apples (expect true):', addItem('apples'));
-console.log('Adding pears (expect true):', addItem('pears'));
+console.log('Adding cherries (expect true):', addItem('cherries'));
 console.log('Adding cheese (expect true):', addItem('cheese'));
+console.log('Adding crackers (expect true):', addItem('crackers'));
+
 
 console.log(basket);
 
