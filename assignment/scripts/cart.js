@@ -50,10 +50,38 @@ function empty(container) {
 console.log('After removing everything... basket is:', empty(basket));
 console.log('Basket is now:', basket);
 
+console.log("******* Stretch Goals *******");
 
+const maxItems = 5;
 
+function isFull(container) {
+    if (maxItems > container.length) {
+        return false;
+    } else if (maxItems <= container.length) {
+        return true;
+    } else {
+        return "not an array!";
+    }
+}
 
+function addItemCarefully(item) {
+    if (isFull(basket) == false) {
+        basket.push(item);
+        return true;
+    } else {
+        console.log(`The basket is already full! Cannot add ${item}!`);
+        return false;
+    }
+}
 
+console.log('Adding pita chips (expect true):', addItemCarefully('pita chips'));
+console.log('Adding hummus (expect true):', addItemCarefully('hummus'));
+console.log('Adding olives (expect true):', addItemCarefully('olives'));
+console.log('Adding beer (expect true):', addItemCarefully('beer'));
+console.log('Adding tzatziki (expect true):', addItemCarefully('tzatziki'));
+console.log('Adding moussaka (expect false):', addItemCarefully('moussaka'));
+
+console.log(`Basket is now: ${basket}.`);
 
 
 
